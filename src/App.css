@@ -1,0 +1,146 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  background-color: #f2f4f7;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Main Container */
+.main {
+  width: 100%;
+  max-width: 480px;
+  background-color: #ffffff;
+  padding: 22px;
+  border-radius: 10px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+}
+
+/* Title */
+.main h1 {
+  text-align: center;
+  color: #333;
+  margin-bottom: 20px;
+  font-size: 24px;
+}
+
+/* Input Section */
+.add {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.add input {
+  flex: 1;
+  padding: 10px 12px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  font-size: 14px;
+  outline: none;
+}
+
+.add input:focus {
+  border-color: #4a6cf7;
+}
+
+/* Buttons */
+.add button {
+  padding: 10px 14px;
+  border: none;
+  border-radius: 6px;
+  background-color: #4a6cf7;
+  color: #fff;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+/* Todo List */
+.second {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+/* Todo Item */
+.second > div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #f8f9fb;
+  padding: 10px 12px;
+  border-radius: 6px;
+}
+
+/* Todo Text */
+.second p {
+  flex: 1;
+  font-size: 14px;
+  color: #333;
+  word-break: break-word;
+}
+
+/* Action Buttons */
+.second button {
+  margin-left: 6px;
+  padding: 6px 10px;
+  font-size: 12px;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+}
+
+/* Edit Button */
+.second button:first-of-type {
+  background-color: #28a745;
+  color: #fff;
+}
+
+/* Delete Button */
+.second button:last-of-type {
+  background-color: #dc3545;
+  color: #fff;
+}
+
+/* Completed Todo */
+.completed p {
+  text-decoration: line-through;
+  color: #888;
+}
+
+/* Tablet */
+@media (max-width: 768px) {
+  .main {
+    margin: 20px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 480px) {
+  .add {
+    flex-direction: column;
+  }
+
+  .add button {
+    width: 100%;
+  }
+
+  .second > div {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+
+  .second button {
+    width: 100%;
+    margin-left: 0;
+  }
+}
